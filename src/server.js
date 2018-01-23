@@ -7,13 +7,13 @@ let alpha = 'beta';
 console.log(alpha);
 
 app.set('view engine', 'jade');
-app.set('views', __dirname + '/routes');
+app.set('views', __dirname + '/../src/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.engine('jade', require('jade').__express);
 app.engine('html', require('ejs').renderFile);
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/static'));
 
 // app.set('views', __dirname + '/routes');
 // app.engine('html', require('ejs').__express);
