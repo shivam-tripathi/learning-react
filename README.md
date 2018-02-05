@@ -1,25 +1,25 @@
-# Simple ES6 and React beginner environment
+# React set up for beginners
 
-================================================================================
+--------------------------------------------------------------------------------
 
-Simple set-up for react and es6 beginners.
-Enter all code in `src` directory. It will be transpiled to code in `lib`
-directory, which will be used to run the web server. All client side files (js,
-css etc.) will reside in the `src/static` directory, so that they could be
-included in the browser.
+This is a template setup building react apps from scratch, with support for
+server side code in es6. It uses webpack to bundle all the client side code
+to be directly included in the browser, and babel setup to transpile server
+side.
 
-Run the following to transpile ES6 via babel and run the server.
+All server side code goes in `src/server` directory. Similarly, all client side
+code goes in `src/client/js`. For other static files like css, you can add them
+in the relevant folders in `src/client`.
+
+
+Run the following to build all server side and client side code.
 ```shell
-npm run buildrun
+npm start
 ```
 
 Alternatively, you can run the following to clear transpiled code and build:
-```
+```shell
 npm run clean
 npm run build
-```
-
-To rerun the server, simply enter the following in the command line:
-```
-npm start
+npm run runserver
 ```
