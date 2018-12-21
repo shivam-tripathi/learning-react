@@ -1,10 +1,10 @@
 {
-  "name": "express.js",
-  "version": "1.0.0",
-  "description": "express.js ",
+  "name": "react-beginner-env",
+  "version": "2.0.0",
+  "description": "Basic skeleton for setting up react+node apps",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./server/",
+    "clean": "rm -rf ./server/ ./static/client/js/bundles",
     "build": "npm run build-server && npm run build-client",
     "runserver": "node ./server/server.js",
     "start": "export WEBPACK_MODE=development && npm run build && npm run runserver",

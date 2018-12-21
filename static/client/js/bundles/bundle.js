@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/client/js/client.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/client/client.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -23585,10 +23585,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/client/js/client.js":
-/*!*********************************!*\
-  !*** ./src/client/js/client.js ***!
-  \*********************************/
+/***/ "./src/client/client.js":
+/*!******************************!*\
+  !*** ./src/client/client.js ***!
+  \******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

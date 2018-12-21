@@ -1,8 +1,8 @@
 module.exports = {
     mode: 'development',
-    entry: __dirname + "/src/client/js/client.js",
+    entry: __dirname + "/src/client/client.js",
     output: {
-            path: __dirname + "/client/static/js",
+            path: __dirname + "/static/client/js/bundles",
             filename: "bundle.js",
         },
     module: {
