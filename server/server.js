@@ -19,7 +19,7 @@ app.set('views', _path.default.join(__dirname, '/../static/views')); // Client s
 app.use(_express.default.static(_path.default.join(__dirname + '/../static/client'))); // Express routing
 
 app.get('/', (req, res, next) => {
-  // res.send('<h1> Hello, world! </h1>');
+  console.log('Received route request for / and serving now');
   res.render('index.pug');
 }); // Listen
 

@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname + '/../static/client')));
 
 // Express routing
 app.get('/', (req, res, next) => {
-	// res.send('<h1> Hello, world! </h1>');
+	console.log('Received route request for / and serving now');
 	res.render('index.pug');
 });
 
