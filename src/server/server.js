@@ -11,12 +11,13 @@ app.engine('pug', require('pug').__express);
 app.engine('html', require('ejs').renderFile);
 
 // Set views section, which contains all the html and pug files
-app.set('views', path.join(__dirname, '/../../src/views'));
+app.set('views', path.join(__dirname, '/../client/views'));
 // Client side css and js files which would be loaded in the browser
-app.use(express.static(path.join(__dirname + '/../client')));
+app.use(express.static(path.join(__dirname + '/../client/static')));
 
 // Express routing
 app.get('/', (req, res, next) => {
+	// res.send('<h1> Hello, world! </h1>');
 	res.render('index.pug');
 });
 

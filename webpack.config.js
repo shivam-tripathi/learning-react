@@ -1,15 +1,24 @@
 module.exports = {
+    mode: 'development',
     entry: __dirname + "/src/client/js/client.js",
     output: {
-         path: __dirname + "/lib/client/js",
-         filename: "bundle.js"
-    }, module: {
-    rules: [ {
-            test: __dirname + "/src/client/js",
-            loader: 'babel-loader',
-            query: {
-                presets: ['env', 'stage-0', 'react']
-            }
-        } ]
-    }
+            path: __dirname + "/client/static/js",
+            filename: "bundle.js",
+        },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                },
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    stats: {
+        colors: true
+    },
+    devtool: 'source-map'
 }
