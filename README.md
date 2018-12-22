@@ -1,11 +1,11 @@
-# React set up for beginners
+# Skeleton code for building server side node and client side react apps
 
 --------------------------------------------------------------------------------
 
 This is a basic template setup building react apps with node backend from
-scratch. It also supports server side code in es6. It uses webpack to bundle all
-the client side code to be directly included in the browser, and babel setup to
-transpile server side.
+scratch. It uses es6 for server side code as well as client side code. Webpack is used to bundle all
+the client side code, which can then be directly included in the corresponding page. Simple babel is used to
+transpile server side, you can find babel config file inside the `src/server`.
 
 All server side code goes in `src/server` directory. Similarly, all client side
 code goes in `src/client/`. For other static files like css, you can add them
