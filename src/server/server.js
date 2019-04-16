@@ -13,17 +13,14 @@ app.engine('html', require('ejs').renderFile);
 // Set views section, which contains all the html and pug files
 app.set('views', path.join(__dirname, '/../static/views'));
 // Client side css and js files which would be loaded in the browser
-app.use(express.static(path.join(__dirname + '/../static/client')));
+app.use(express.static(path.join(__dirname, '/../static/client')));
 
 // Express routing
-app.get('/', (req, res, next) => {
-	console.log('Received route request for / and serving now');
-	res.render('index.pug');
+app.get('/', (req, res) => {
+  console.log('Received route request for / and serving now'); // eslint-disable-line no-console
+  res.render('index.pug');
 });
 
 // Listen
 app.listen('8888', '127.0.0.1');
-console.log('Express started on port 8888');
-console.log('All the best!');
-
-
+console.log('Express started on port 8888'); // eslint-disable-line no-console
