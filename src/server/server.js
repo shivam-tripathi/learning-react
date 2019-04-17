@@ -17,10 +17,9 @@ app.use(express.static(path.join(__dirname, '/../static/client')));
 
 // Express routing
 app.get('/', (req, res) => {
-  console.log('Received route request for / and serving now'); // eslint-disable-line no-console
-  res.render('index.pug');
+  res.render('index.pug', { scriptPath: '/js/bundles/bundle.js' });
 });
 
 // Listen
 app.listen('8888', '127.0.0.1');
-console.log('Express started on port 8888'); // eslint-disable-line no-console
+console.log('Server started on port 8888'); // eslint-disable-line no-console

@@ -7,10 +7,13 @@
     "clean": "rm -rf ./server/ ./static/client/js/bundles",
     "build": "npm run build-server && npm run build-client",
     "runserver": "node ./lib/server.js",
-    "start": "export WEBPACK_MODE=development && npm run build && npm run runserver",
     "build-client": "webpack --display-error-details",
-    "build-server": "npx babel ./src/server/ --out-dir ./lib",
-    "precommit": "lint-staged"
+    "build-server": "babel ./src/server/ --out-dir ./lib",
+    "watch-server": "babel ./src/server/ --watch --out-dir ./lib",
+    "watch-client": "webpack --watch --display-error-details",
+    "dev-server": "node ./scripts/nodemon-server.js",
+    "start": "npm run build && npm run runserver",
+    "stop": "killall node"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -29,6 +32,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.2",
     "mongoose": "^5.5.2",
+    "nodemon": "^1.18.11",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
@@ -57,5 +61,10 @@
     "pretty-quick": "^1.10.0",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
