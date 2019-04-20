@@ -3,3 +3,4 @@ node_modules
 lib/
 static/client/js/bundles/
 package-lock.json
+logs
