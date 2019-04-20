@@ -1,26 +1,49 @@
-# Skeleton code for building server side node and client side react apps
+# A simple web site
+
+## Written in typescript and reactjs
 
 ---
 
-This is a basic template setup building react apps with node backend from
-scratch. It uses es6 for server side code as well as client side code. Webpack is used to bundle all
-the client side code, which can then be directly included in the corresponding page. Simple babel is used to
-transpile server side, you can find babel config file inside the `src/server`.
-
-All server side code goes in `src/server` directory. Similarly, all client side
-code goes in `src/client/`. For other static files like css, you can add them
-in the relevant folders in `static/client/`. Views reside in `static/views`.
-
-Run the following to build all server side and client side code.
+To just test out the code:
 
 ```shell
 npm start
 ```
 
-Alternatively, you can run the following to clear transpiled code and build:
+In development mode, to build, start and watch for changes in server code:
+
+```shell
+npm run dev:run:server
+```
+
+In production, to build server:
+
+```shell
+npm run prod:build:server
+```
+
+In production to start the server:
+
+```shell
+npm run pm2:run:server
+```
+
+In production to stop the server:
+
+```shell
+npm run pm2:stop:server
+```
+
+To build and watch client side code:
+
+```shell
+npm run watch:client
+```
+
+A more verbose procedure could be:
 
 ```shell
 npm run clean
 npm run build
-npm run runserver
+npm run dev:start:server
 ```
