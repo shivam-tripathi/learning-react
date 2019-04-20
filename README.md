@@ -1,8 +1,6 @@
-# A simple web site
+# A simple web site skeleton
 
-## Written in typescript and reactjs
-
----
+#### Written in typescript and reactjs
 
 To just test out the code:
 
