@@ -1,4 +1,4 @@
-# A simple web site skeleton
+# Learning React
 
 #### Written in typescript and reactjs
 
