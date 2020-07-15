@@ -17,8 +17,7 @@ app.use(express.static(path.join(__dirname, '/../static/client')));
 app.use(morgan('combined'));
 
 // Express routing
-app.get('/', (req, res) => {
-  logger.info('Request for / received');
+app.get('/*', (req, res) => {
   return res.render('index.pug', { scriptPath: '/js/bundles/bundle.js' });
 });
 
