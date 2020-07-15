@@ -1,15 +1,24 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Docs from './docs';
 
-(window as any).React = React;
-
-const HelloWorld = () => {
+const App = () => {
   return (
-    <div>
-      <h1>Hello, World! How are you doing?</h1>
-      <p> I am doing fine, how are you?</p>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <h1> Welcome to React Learning!</h1>
+            <Link to="/docs">Docs</Link>
+          </Route>
+          <Route path="/docs">
+            <Docs />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 };
 
-ReactDOM.render(<HelloWorld />, document.getElementById('react-container'));
+ReactDOM.render(<App />, document.getElementById('react-container'));
