@@ -3,4 +3,5 @@ node_modules
 lib/
 static/client/js/bundles/
 package-lock.json
+yarn.lock
 logs
