@@ -62,7 +62,7 @@ class PassingArguments extends React.Component<{}, { active?: number }> {
     const buttons = [];
     for (let i = 1; i <= 10; i += 1) {
       const button = (
-        <button type="button" onClick={this.handleClick.bind(this, i)}>
+        <button key={`button:${i}`} type="button" onClick={this.handleClick.bind(this, i)}>
           {i}
         </button>
       );
