@@ -10,7 +10,11 @@ export default () => {
       <Switch>
         <Route exact path={match.url}>
           <h1> React Docs </h1>
-          <Link to={URL.construct(match.url, 'main-concepts')}>Main concepts</Link>
+          <ul>
+            <li>
+              <Link to={URL.construct(match.url, 'main-concepts')}>Main concepts</Link>
+            </li>
+          </ul>
         </Route>
         <Route path={URL.construct(match.url, 'main-concepts')}>
           <MainConcepts />
