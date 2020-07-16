@@ -1,12 +1,14 @@
 import React from 'react';
 import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import StateAndLifecycle from './state-and-lifecycle';
+import HandlingEvents from './handling-events';
 import LiftingStateUp from './lifting-state-up';
 import URL from '../../utils/url';
 
 // Add new topics here
 const topics: { url: string; name: string; Component: () => JSX.Element }[] = [
   StateAndLifecycle,
+  HandlingEvents,
   LiftingStateUp,
 ];
 
