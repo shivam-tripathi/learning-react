@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import StateAndLifecycle from './state-and-lifecycle';
 import HandlingEvents from './handling-events';
+import ConditionalRendering from './conditional-rendering';
 import LiftingStateUp from './lifting-state-up';
 import URL from '../../utils/url';
 
@@ -9,6 +10,7 @@ import URL from '../../utils/url';
 const topics: { url: string; name: string; Component: () => JSX.Element }[] = [
   StateAndLifecycle,
   HandlingEvents,
+  ConditionalRendering,
   LiftingStateUp,
 ];
 
