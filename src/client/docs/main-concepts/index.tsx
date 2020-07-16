@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import LiftingStateUp from './lifting-state-up';
+import URL from '../../utils/url';
 
 // Add new topics here
 const topics: { url: string; name: string; Component: () => JSX.Element }[] = [LiftingStateUp];
@@ -9,7 +10,7 @@ export default () => {
   const match = useRouteMatch();
 
   const links = topics.map(topic => (
-    <Link key={topic.url} to={`${match.url}/${topic.url}`}>
+    <Link key={topic.url} to={URL.construct(match.url, topic.url)}>
       {topic.name}
     </Link>
   ));
@@ -17,7 +18,7 @@ export default () => {
   const routes = topics.map(topic => {
     const { url: topicUrl, Component } = topic;
     return (
-      <Route key={topicUrl} path={`${match.url}/${topicUrl}`}>
+      <Route key={topicUrl} path={URL.construct(match.url, topic.url)}>
         <Component />
       </Route>
     );
