@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Docs from './docs';
+import ReactDocs from './docs';
+import URL from './utils/url';
 
+const topics = [ReactDocs];
 const App = () => {
   return (
     <>
@@ -10,11 +12,17 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <h1> Welcome to React Learning!</h1>
-            <Link to="/docs">Docs</Link>
+            {topics.map(topic => (
+              <Link key={topic.url} to={URL.construct('/', topic.url)}>
+                {topic.name}
+              </Link>
+            ))}
           </Route>
-          <Route path="/docs">
-            <Docs />
-          </Route>
+          {topics.map(topic => (
+            <Route key={topic.url} path={URL.construct('/', topic.url)}>
+              <topic.Component />
+            </Route>
+          ))}
         </Switch>
       </Router>
     </>
