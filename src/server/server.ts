@@ -2,6 +2,7 @@ import express from 'express';
 import * as path from 'path';
 import morgan from 'morgan';
 import logger from './helpers/logger';
+import router from './routes';
 
 // Create app
 const app = express();
@@ -17,7 +18,8 @@ app.use(express.static(path.join(__dirname, '/../static/client')));
 app.use(morgan('combined'));
 
 // Express routing
-app.get('/*', (req, res) => {
+app.use('/api', router);
+app.get('/*', (_, res) => {
   return res.render('index.pug', { scriptPath: '/js/bundles/bundle.js' });
 });
 
