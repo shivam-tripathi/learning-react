@@ -20,7 +20,9 @@ app.use(morgan('combined'));
 // Express routing
 app.use('/api', router);
 app.get('/*', (_, res) => {
-  return res.render('index.pug', { scriptPath: '/js/bundles/bundle.js' });
+  return res.send(
+    '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Learning React</title></head><style>body {padding: 50px;}</style><body><div id="react-container"></div></body><script src="/js/bundles/bundle.js"></script></html>'
+  );
 });
 
 // Listen
